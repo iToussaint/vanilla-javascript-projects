@@ -7,28 +7,90 @@
     <link rel="stylesheet" href="src/style.css" />
     <title>Tip Calculator</title>
   </head>
-  <body class="font-roboto">
-    <div class="bg-amber-300 w-fit mx-auto my-32 flex flex-col items-center gap-y-5 p-10">
-      <h1 class="text-3xl font-bold text-slate-800">Tip Calculator</h1>
-      <form action="" class="flex flex-col gap-y-4">
-        <h2 class="text-lg font-semibold">
-          Enter the bill amount and tip percentage to calculate the total.
-        </h2>
+  <body class="font-bitCount">
+    <div class="bg-amber-200 min-h-screen flex flex-col mx-auto max-w-screen-sm p-10">
+      <div
+        class="flex-1 bg-gradient-to-b from-emerald-600 to-emerald-200 grid grid-cols-2 gap-5"
+      >
+        <div class="flex flex-col items-center bg-red-300 py-5">
+          <h1 class="font-bold text-white">TOTAL TIP</h1>
+          <p>$ <span>213</span></p>
+        </div>
+        <div class="flex flex-col items-center bg-red-300 py-5">
+          <h1>TOTAL TIP</h1>
+          <p>213</p>
+        </div>
+        <div class="flex flex-col items-center bg-red-300 py-5">
+          <h1>TOTAL TIP</h1>
+          <p>213</p>
+        </div>
+        <div class="flex flex-col items-center bg-red-300 py-5">
+          <h1>TOTAL TIP</h1>
+          <p>213</p>
+        </div>
+      </div>
+      <div class="flex-1 grid grid-cols-2">
+        <div>Tip</div>
+        <div class=""><input type="text" class="bg-red-400" /></div>
+        <div>Bill</div>
+        <div class="flex gap-x-3">
+          <div class="bg-red-400 flex-1">10%</div>
+          <div class="bg-red-400 flex-1">20%</div>
+          <div class="bg-red-400 flex-1">custom</div>
+        </div>
+        <div>Split?</div>
+        <div><input type="text" class="bg-red-400" /></div>
+      </div>
 
-        <label for="bill-amount" class=" relative">
-          <span class="absolute top-1/4 left-5 text-slate-700 peer-focus:top-0">Bill amount:</span>
-          <input name="bill-amount" type="number" class="peer w-full px-5 py-2 focus:ring-4 focus:ring-green-500 outline-none z-1" />
-        </label>
-
-        <label for="percentage">
-          <span>Tip percentage: </span>
-          <input name="percentage" type="number" class="bg-red-400" />
-        </label>
-
-        <button>Calculate</button>
-      </form>
-      <div>Total: <span id="tip"></span></div>
+      <div class="flex-1 grid grid-cols-3 gap-3 bg-amber-400 text-xl">
+        <div class="bg-red-300 flex items-center justify-center py-3">1</div>
+        <div class="bg-red-300 flex items-center justify-center py-3">2</div>
+        <div class="bg-red-300 flex items-center justify-center py-3">3</div>
+        <div class="bg-red-300 flex items-center justify-center py-3">4</div>
+        <div class="bg-red-300 flex items-center justify-center py-3">5</div>
+        <div class="bg-red-300 flex items-center justify-center py-3">6</div>
+        <div class="bg-red-300 flex items-center justify-center py-3">7</div>
+        <div class="bg-red-300 flex items-center justify-center py-3">8</div>
+        <div class="bg-red-300 flex items-center justify-center py-3">9</div>
+        <div class="bg-red-300 flex items-center justify-center py-3">.</div>
+        <div class="bg-red-300 flex items-center justify-center py-3">0</div>
+        <div class="bg-red-300 flex items-center justify-center py-3">
+          delete
+        </div>
+      </div>
     </div>
+
+    <!-- 
+    <div
+      class="bg-amber-300 w-fit mx-auto my-32 flex flex-col items-center gap-y-5 p-10"
+    >
+      <h1 class="text-3xl font-bold text-slate-800">Tip Calculator</h1>
+
+      <h2 class="text-lg font-semibold">
+        Enter the bill amount and tip percentage to calculate the total.
+      </h2>
+
+      <div>
+        <input
+          id="bill-amount"
+          placeholder="Enter the bill amount"
+          name="bill-amount"
+          type="number"
+          class="peer w-full px-5 py-2 focus:ring-4 focus:ring-green-500 outline-none z-1"
+        />
+
+        <input
+          id="tip-percentage"
+          name="percentage"
+          type="number"
+          class="bg-red-400"
+        />
+
+        <button id="calculate-btn" class="bg-green-600">Calculate</button>
+      </div>
+
+      <div>Total: <span id="tip">0</span></div>
+    </div> -->
 
     <script type="module" src="/src/main.js"></script>
   </body>
