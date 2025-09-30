@@ -7,54 +7,68 @@
     <link rel="stylesheet" href="src/style.css" />
     <title>Tip Calculator</title>
   </head>
-  <body class="font-bitCount">
-    <div class="bg-amber-200 min-h-screen flex flex-col mx-auto max-w-screen-sm p-10">
+  <body class="font-roboto">
+    <div
+      class="min-h-screen flex flex-col gap-y-10 mx-auto max-w-screen-sm p-10 shadow-2xl shadow-slate-300 my-20 text-slate-950 rounded-2xl"
+    >
       <div
         class="flex-1 bg-gradient-to-b from-emerald-600 to-emerald-200 grid grid-cols-2 gap-5"
       >
-        <div class="flex flex-col items-center bg-red-300 py-5">
-          <h1 class="font-bold text-white">TOTAL TIP</h1>
-          <p>$ <span>213</span></p>
+        <div
+          class="flex flex-col justify-center items-center gap-y-3 py-5"
+        >
+          <h1 class="font-extrabold text-white">TOTAL TIP</h1>
+          <p class="text-3xl">$ <span>213</span></p>
         </div>
-        <div class="flex flex-col items-center bg-red-300 py-5">
+        <div
+          class="flex flex-col justify-center items-center gap-y-3 py-5"
+        >
           <h1>TOTAL TIP</h1>
-          <p>213</p>
+          <p class="text-3xl">$ <span>213</span></p>
         </div>
-        <div class="flex flex-col items-center bg-red-300 py-5">
+        <div
+          class="flex flex-col justify-center items-center gap-y-3 py-5"
+        >
           <h1>TOTAL TIP</h1>
-          <p>213</p>
+          <p class="text-3xl">$ <span>213</span></p>
         </div>
-        <div class="flex flex-col items-center bg-red-300 py-5">
+        <div
+          class="flex flex-col justify-center items-center gap-y-3 py-5"
+        >
           <h1>TOTAL TIP</h1>
-          <p>213</p>
+          <p class="text-3xl">$ <span>213</span></p>
         </div>
       </div>
-      <div class="flex-1 grid grid-cols-2">
-        <div>Tip</div>
-        <div class=""><input type="text" class="bg-red-400" /></div>
-        <div>Bill</div>
-        <div class="flex gap-x-3">
-          <div class="bg-red-400 flex-1">10%</div>
-          <div class="bg-red-400 flex-1">20%</div>
-          <div class="bg-red-400 flex-1">custom</div>
+      <div class="flex-1 grid grid-cols-2 gap-2">
+        <div class="flex justify-end items-center">Tip</div>
+        <div class="">
+          <input type="text" class="w-full size-full p-2" />
         </div>
-        <div>Split?</div>
-        <div><input type="text" class="bg-red-400" /></div>
+        <div class="flex justify-end items-center">Bill</div>
+        <div class="flex gap-x-3">
+          <div class=" flex-1 flex justify-center items-center py-2">10%</div>
+          <div class="flex-1 flex justify-center items-center py-2">20%</div>
+          <div class="flex-1 flex justify-center items-center py-2">custom</div>
+        </div>
+        <div class="flex justify-end items-center">Split?</div>
+        <div class="">
+          <input type="text" class="size-full p-2" />
+        </div>
       </div>
 
-      <div class="flex-1 grid grid-cols-3 gap-3 bg-amber-400 text-xl">
-        <div class="bg-red-300 flex items-center justify-center py-3">1</div>
-        <div class="bg-red-300 flex items-center justify-center py-3">2</div>
-        <div class="bg-red-300 flex items-center justify-center py-3">3</div>
-        <div class="bg-red-300 flex items-center justify-center py-3">4</div>
-        <div class="bg-red-300 flex items-center justify-center py-3">5</div>
-        <div class="bg-red-300 flex items-center justify-center py-3">6</div>
-        <div class="bg-red-300 flex items-center justify-center py-3">7</div>
-        <div class="bg-red-300 flex items-center justify-center py-3">8</div>
-        <div class="bg-red-300 flex items-center justify-center py-3">9</div>
-        <div class="bg-red-300 flex items-center justify-center py-3">.</div>
-        <div class="bg-red-300 flex items-center justify-center py-3">0</div>
-        <div class="bg-red-300 flex items-center justify-center py-3">
+      <div class="flex-1 grid grid-cols-3 gap-3 text-3xl font-bold">
+        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">1</div>
+        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">2</div>
+        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">3</div>
+        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">4</div>
+        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">5</div>
+        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">6</div>
+        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">7</div>
+        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">8</div>
+        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">9</div>
+        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">.</div>
+        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">0</div>
+        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">
           delete
         </div>
       </div>
