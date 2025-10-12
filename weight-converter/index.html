@@ -1,14 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/style.css" />
     <title>weight-converter</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div
+      class="max-w-screen-sm container mx-auto bg-slate-700 py-10 text-slate-50 flex flex-col gap-5 items-center"
+    >
+      <h1 class="text-4xl w-2/3 text-center">Weight Converter</h1>
+
+      <input
+        id="pounds"
+        type="number"
+        name="pounds"
+        title="pounds"
+        placeholder="Enter pounds"
+        class="bg-slate-300 text-slate-900 text-sm px-4 py-2 w-2/3 rounded-sm outline-0"
+      />
+
+      <div class="space-y-2 w-2/3">
+        <div class="bg-blue-600 p-3 rounded-md">
+          <h1 class="text-xl font-semibold">Grams</h1>
+          <p id="grams">0</p>
+        </div>
+        <div class="bg-green-600 p-3 rounded-md">
+          <h1 class="text-xl font-semibold">KiloGrams</h1>
+          <p id="kilograms">0</p>
+        </div>
+        <div class="bg-red-500 p-3 rounded-md">
+          <h1 class="text-xl font-semibold">Ounces</h1>
+          <p id="ounces">0</p>
+        </div>
+      </div>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
