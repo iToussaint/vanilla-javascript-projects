@@ -8,7 +8,104 @@
     <title>booklist-app</title>
   </head>
   <body>
-    <h1 class="text-4xl">Hello world</h1>
+    <div
+      class="max-w-screen-sm container mx-auto p-10 space-y-10 shadow-2xl shadow-slate-300 rounded-md text-slate-900"
+    >
+      <form
+        action=""
+        class="p-5 flex flex-col gap-y-5 shadow-2xl shadow-slate-300"
+      >
+        <h1 class="text-4xl flex items-center justify-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="size-10"
+          >
+            <path
+              d="M10.75 16.82A7.462 7.462 0 0 1 15 15.5c.71 0 1.396.098 2.046.282A.75.75 0 0 0 18 15.06v-11a.75.75 0 0 0-.546-.721A9.006 9.006 0 0 0 15 3a8.963 8.963 0 0 0-4.25 1.065V16.82ZM9.25 4.065A8.963 8.963 0 0 0 5 3c-.85 0-1.673.118-2.454.339A.75.75 0 0 0 2 4.06v11a.75.75 0 0 0 .954.721A7.506 7.506 0 0 1 5 15.5c1.579 0 3.042.487 4.25 1.32V4.065Z"
+            />
+          </svg>
+          My<span class="text-blue-500">Book</span>List
+        </h1>
+
+        <p
+          id="add-message"
+          class="bg-green-500 text-slate-50 w-fit px-10 py-3 rounded-sm hidden"
+        >
+          Book added successfully!!
+        </p>
+        <p
+          id="delete-message"
+          class="bg-green-500 text-slate-50 w-fit px-10 py-3 rounded-sm hidden"
+        >
+          Book deleted successfully!!
+        </p>
+        <div class="flex flex-col gap-1">
+          <label for="title" class="font-semibold">Title</label>
+          <input
+            id="title"
+            type="text"
+            name="title"
+            title="title"
+            placeholder="title"
+            class="bg-slate-200 py-2 px-4 rounded-sm outline-0 focus:ring-4 focus:ring-blue-300"
+          />
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="author" class="font-semibold">Title</label>
+          <input
+            id="author"
+            type="text"
+            name="author"
+            title="author"
+            placeholder="title"
+            class="bg-slate-200 py-2 px-4 rounded-sm outline-0 focus:ring-4 focus:ring-blue-300"
+          />
+        </div>
+        <div class="flex flex-col gap-1">
+          <label for="isbn" class="font-semibold">ISBN#</label>
+          <input
+            id="isbn"
+            type="text"
+            name="isbn"
+            title="ISBN"
+            placeholder="title"
+            class="bg-slate-200 py-2 px-4 rounded-sm outline-0 focus:ring-4 focus:ring-blue-300"
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="bg-blue-500 text-slate-50 py-2 rounded-sm cursor-pointer"
+        >
+          Add book
+        </button>
+      </form>
+
+      <table class="w-full bg-slate-200">
+        <thead class="font-bold bg-slate-300">
+          <td class="p-2">Title</td>
+          <td>Author</td>
+          <td>ISBN</td>
+          <td></td>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td class="p-2">Weep not child</td>
+            <td>Ngugi wa thiong</td>
+            <td>427856238745</td>
+            <td>
+              <button
+                class="bg-red-500 rounded-sm text-slate-50 size-6 cursor-pointer"
+              >
+                X
+              </button>
+            </td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
