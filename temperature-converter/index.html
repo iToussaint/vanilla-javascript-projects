@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>temperature-converter</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body class="font-garamond text-slate-800">
+    <form
+      action=""
+      class="bg-green-400 max-w-fit mx-auto my-32 flex flex-col gap-y-4 p-10 rounded-xl shadow-2xl shadow-slate-400"
+    >
+      <h1 class="text-center text-2xl text-slate-800 font-bold">
+        TEMPERATURE CONVERTER
+      </h1>
+      <div class="flex flex-col gap-y-3">
+        <label for="" class="flex justify-between items-center">
+          <span class="font-semibold text-lg">Celsius: </span>
+          <input
+            type="number"
+            id="celsius"
+            class="bg-slate-300 rounded-lg outline-0 pl-2 py-2 focus:ring-2 focus:ring-slate-500"
+          />
+        </label>
+        <label for="" class="flex justify-between items-center">
+          <span class="font-semibold text-lg">Fehrenheit: </span>
+          <input
+            type="number"
+            id="fahrenheit"
+            class="bg-slate-300 rounded-lg outline-0 pl-2 py-2 focus:ring-2 focus:ring-slate-500"
+          />
+        </label>
+        <label for="" class="flex justify-between items-center">
+          <span class="font-semibold text-lg">Kelvin: </span>
+          <input
+            type="number"
+            id="kelvin"
+            class="bg-slate-300 rounded-lg outline-0 pl-2 py-2 focus:ring-2 focus:ring-slate-500"
+          />
+        </label>
+      </div>
+    </form>
+
+    <script src="/src/main.js"></script>
+  </body>
+</html>
