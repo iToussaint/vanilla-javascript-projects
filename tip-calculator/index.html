@@ -1,111 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
     <title>Tip Calculator</title>
+    <link rel="stylesheet" href="./src/style.css" />
   </head>
-  <body class="font-roboto">
-    <div
-      class="min-h-screen flex flex-col gap-y-10 mx-auto max-w-screen-sm p-10 shadow-2xl shadow-slate-300 my-20 text-slate-950 rounded-2xl"
+  <body class="font-garamond text-lg">
+    <section
+      class="flex flex-col gap-y-4 m-auto my-32 max-w-fit p-10 shadow-2xl shadow-slate-400 rounded-lg"
     >
-      <div
-        class="flex-1 bg-gradient-to-b from-emerald-600 to-emerald-200 grid grid-cols-2 gap-5"
+      <h1 class="font-bold text-4xl text-center text-slate-900">
+        TIP CALCULATOR
+      </h1>
+
+      <form action="" class="flex flex-col gap-y-3">
+        <h3>
+          Enter the bill amount and tip percentage to calculate the total.
+        </h3>
+
+        <div class="flex flex-col gap-y-4">
+          <label for="" class="flex flex-col">
+            <span class="font-semibold text-lg">Bill amount:</span>
+
+            <input
+              type="number"
+              id="bill-amount"
+              class="bg-gray-200 pl-3 py-2 outline-0 focus:ring-2 focus:ring-slate-600 rounded-lg"
+            />
+          </label>
+
+          <label for="" class="flex flex-col">
+            <span class="font-semibold text-lg">Tip percentage:</span>
+
+            <input
+              type="number"
+              id="tip-percentage"
+              class="bg-gray-200 pl-3 py-2 outline-0 focus:ring-2 focus:ring-slate-600 rounded-lg"
+            />
+          </label>
+        </div>
+      </form>
+
+      <button
+        id="calculate-btn"
+        class="bg-slate-800 text-slate-100 px-10 py-2 cursor-pointer"
       >
-        <div
-          class="flex flex-col justify-center items-center gap-y-3 py-5"
-        >
-          <h1 class="font-extrabold text-white">TOTAL TIP</h1>
-          <p class="text-3xl">$ <span>213</span></p>
-        </div>
-        <div
-          class="flex flex-col justify-center items-center gap-y-3 py-5"
-        >
-          <h1>TOTAL TIP</h1>
-          <p class="text-3xl">$ <span>213</span></p>
-        </div>
-        <div
-          class="flex flex-col justify-center items-center gap-y-3 py-5"
-        >
-          <h1>TOTAL TIP</h1>
-          <p class="text-3xl">$ <span>213</span></p>
-        </div>
-        <div
-          class="flex flex-col justify-center items-center gap-y-3 py-5"
-        >
-          <h1>TOTAL TIP</h1>
-          <p class="text-3xl">$ <span>213</span></p>
-        </div>
-      </div>
-      <div class="flex-1 grid grid-cols-2 gap-2">
-        <div class="flex justify-end items-center">Tip</div>
-        <div class="">
-          <input type="text" class="w-full size-full p-2" />
-        </div>
-        <div class="flex justify-end items-center">Bill</div>
-        <div class="flex gap-x-3">
-          <div class=" flex-1 flex justify-center items-center py-2">10%</div>
-          <div class="flex-1 flex justify-center items-center py-2">20%</div>
-          <div class="flex-1 flex justify-center items-center py-2">custom</div>
-        </div>
-        <div class="flex justify-end items-center">Split?</div>
-        <div class="">
-          <input type="text" class="size-full p-2" />
-        </div>
-      </div>
+        Calculate
+      </button>
 
-      <div class="flex-1 grid grid-cols-3 gap-3 text-3xl font-bold">
-        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">1</div>
-        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">2</div>
-        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">3</div>
-        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">4</div>
-        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">5</div>
-        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">6</div>
-        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">7</div>
-        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">8</div>
-        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">9</div>
-        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">.</div>
-        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">0</div>
-        <div class="flex items-center justify-center py-3 cursor-pointer hover:shadow-xl hover:shadow-slate-100">
-          delete
-        </div>
-      </div>
-    </div>
+      <p>Total: <span id="tip" class="font-bold text-lg"></span></p>
+    </section>
 
-    <!-- 
-    <div
-      class="bg-amber-300 w-fit mx-auto my-32 flex flex-col items-center gap-y-5 p-10"
-    >
-      <h1 class="text-3xl font-bold text-slate-800">Tip Calculator</h1>
-
-      <h2 class="text-lg font-semibold">
-        Enter the bill amount and tip percentage to calculate the total.
-      </h2>
-
-      <div>
-        <input
-          id="bill-amount"
-          placeholder="Enter the bill amount"
-          name="bill-amount"
-          type="number"
-          class="peer w-full px-5 py-2 focus:ring-4 focus:ring-green-500 outline-none z-1"
-        />
-
-        <input
-          id="tip-percentage"
-          name="percentage"
-          type="number"
-          class="bg-red-400"
-        />
-
-        <button id="calculate-btn" class="bg-green-600">Calculate</button>
-      </div>
-
-      <div>Total: <span id="tip">0</span></div>
-    </div> -->
-
-    <script type="module" src="/src/main.js"></script>
+    <script src="./src/main.js"></script>
   </body>
 </html>
