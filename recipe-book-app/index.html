@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>recipe-book-app</title>
+  </head>
+  <body>
+    <section class="min-h-screen flex flex-col">
+      <div class="bg-slate-900 py-8 mb-10">
+        <h1 class="text-4xl text-slate-100 font-bold text-center">
+          Recipe Book App
+        </h1>
+      </div>
+      <ul
+        id="recipesContainer"
+        class="max-w-7xl mx-auto container space-y-5 p-4 flex-1"
+      >
+        <div
+          id="loader"
+          class="w-10 h-10 border-4 mx-auto border-slate-800 border-t-transparent border-b-transparent rounded-full animate-spin my-32"
+        ></div>
+      </ul>
+    </section>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
