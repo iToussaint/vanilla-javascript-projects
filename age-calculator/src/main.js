@@ -9,16 +9,17 @@ let [yearToday, monthToday, dayToday] = [
   new Date().getDate(),
 ];
 
-calculateBtn.addEventListener("click", function () {
-  message.classList.remove("hidden");
-  ageText.textContent = calculate(this.value)
+calculateBtn.addEventListener("click", function (event) {
+  event.preventDefault();
+
+  message.textContent = calculate(dateOfBirthField.value)
     .reverse()
     .reduce(
       (acc, el, index) =>
         acc +
         el +
-        (index === 0 ? " years " : index === 1 ? " months " : " and days"),
-      ""
+        (index === 0 ? " years " : index === 1 ? " months and " : " days old."),
+      "You are ",
     );
 });
 
@@ -34,8 +35,7 @@ function calculate(dateOfBirth) {
   return [days, months, years].map((el, index, arr) => {
     if (el < 0) {
       if (index === 0) {
-        console.log(new Date(yearToday, monthToday, 0));
-        el += new Date(yearToday, monthToday, 0);
+        el += new Date(yearToday, monthToday, 0).getDate();
         arr[index + 1]--;
       } else if (index === 1) {
         el += 12;
